@@ -1,0 +1,139 @@
+name: xxh
+on:
+ push:
+  branches:
+      - master
+ workflow_dispatch:
+  schedule:
+    - cron: '*/30 * * * *'
+  watch:
+  repository_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+            node-version: 12.x
+      - name: npm install
+        run: |
+            npm install
+      - name: 'mon0eyT0ree'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /The.Flash/The.Flash/j1d_mon0eyT0ree.js
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }} 
+            
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+            node-version: 12.x
+      - name: npm install
+        run: |
+            npm install
+      - name: 'pi0gPe0t0'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /The.Flash/The.Flash/pi0gPe0t0.js
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }} 
+            
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+            node-version: 12.x
+      - name: npm install
+        run: |
+            npm install
+      - name: 'djzd'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /DJZD.js
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }} 
+            
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+            node-version: 12.x
+      - name: npm install
+        run: |
+            npm install
+      - name: 'DJDC'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /DJDC.js
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }} 
+            
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+            node-version: 12.x
+      - name: npm install
+        run: |
+            npm install
+      - name: 'DJSMcs'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /DJSM.js
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }}  
+            
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+            node-version: 12.x
+      - name: npm install
+        run: |
+            npm install
+      - name: 'sp0eed'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /The.Flash/The.Flash/j0d_sp0eed.js
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }}  
+            
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+            node-version: 12.x
+      - name: npm install
+        run: |
+            npm install
+      - name: 'live_redrai'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /The.Flash/The.Flash/jd_live_redrain.js
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }}
