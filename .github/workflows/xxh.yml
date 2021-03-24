@@ -2,7 +2,7 @@ name: xxh
 on:
   workflow_dispatch:
   schedule:
-    - cron: '36 * * * *'
+    - cron: '*/30 * * * *'
   watch:
   repository_dispatch:
 jobs:
