@@ -42,24 +42,6 @@ jobs:
       - name: npm install
         run: |
             npm install
-      - name: 'bea0n_sig0n'
-        run: |
-            node Club.js
-        env:
-            JD_COOKIE: ${{ secrets.JD_COOKIE }}
-            SYNCURL: /The.Flash/The.Flash/bea0n_sig0n.js
-            GITHUB: ${{ secrets.GITHUB }}
-            HELPURL: ${{ secrets.HELPURL }}
-            EFORK: ${{ secrets.EFORK }} 
-            
-      - uses: actions/checkout@v1
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
-        with:
-            node-version: 12.x
-      - name: npm install
-        run: |
-            npm install
       - name: 'j0y_st0eal'
         run: |
             node Club.js
