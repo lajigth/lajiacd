@@ -26,3 +26,51 @@ jobs:
             SYNCURL: /The.Flash/The.Flash/j1d_mon0eyT0ree.js
             GITHUB: ${{ secrets.GITHUB }}
             HELPURL: ${{ secrets.HELPURL }}
+            
+      - name: npm install
+        run: |
+            npm install
+      - name: 'pi0gPe0t0'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /The.Flash/The.Flash/pi0gPe0t0.js
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
+            
+      - name: npm install
+        run: |
+            npm install
+      - name: 'djzd'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /DJZD.js
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
+            
+      - name: npm install
+        run: |
+            npm install
+      - name: 'DJDC'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /DJDC.js
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
+            
+      - name: npm install
+        run: |
+            npm install
+      - name: 'DJSMcs'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /DJSM.js
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
