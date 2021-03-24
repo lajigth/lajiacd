@@ -3,8 +3,6 @@ on:
  workflow_dispatch:
   schedule:
     - cron: '*/30 * * * *'
-  watch:
-  repository_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
