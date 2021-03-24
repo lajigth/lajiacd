@@ -8,7 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js 12.x
@@ -26,6 +25,7 @@ jobs:
             SYNCURL: /The.Flash/The.Flash/j1d_mon0eyT0ree.js
             GITHUB: ${{ secrets.GITHUB }}
             HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }} 
             
       - name: npm install
         run: |
@@ -38,6 +38,7 @@ jobs:
             SYNCURL: /The.Flash/The.Flash/pi0gPe0t0.js
             GITHUB: ${{ secrets.GITHUB }}
             HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }} 
             
       - name: npm install
         run: |
@@ -50,6 +51,7 @@ jobs:
             SYNCURL: /DJZD.js
             GITHUB: ${{ secrets.GITHUB }}
             HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }} 
             
       - name: npm install
         run: |
@@ -62,6 +64,7 @@ jobs:
             SYNCURL: /DJDC.js
             GITHUB: ${{ secrets.GITHUB }}
             HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }} 
             
       - name: npm install
         run: |
@@ -74,3 +77,4 @@ jobs:
             SYNCURL: /DJSM.js
             GITHUB: ${{ secrets.GITHUB }}
             HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }} 
