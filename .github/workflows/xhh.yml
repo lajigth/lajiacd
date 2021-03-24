@@ -128,12 +128,48 @@ jobs:
       - name: npm install
         run: |
             npm install
-      - name: 'live_redrai'
+      - name: 'ddquan'
         run: |
             node Club.js
         env:
             JD_COOKIE: ${{ secrets.JD_COOKIE }}
-            SYNCURL: /The.Flash/The.Flash/jd_live_redrain.js
+            SYNCURL: /The.Flash/The.Flash/ne0cklace0.js
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }}  
+            
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+            node-version: 12.x
+      - name: npm install
+        run: |
+            npm install
+      - name: 'un0subscribe0'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /The.Flash/The.Flash/un0subscribe0.js
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }}  
+            
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+            node-version: 12.x
+      - name: npm install
+        run: |
+            npm install
+      - name: 'XJJC'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /XJJC.js
             GITHUB: ${{ secrets.GITHUB }}
             HELPURL: ${{ secrets.HELPURL }}
             EFORK: ${{ secrets.EFORK }}
