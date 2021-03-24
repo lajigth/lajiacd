@@ -1,24 +1,24 @@
 name: xxh
 on:
-   # push:
-   #  branches:
-     #    - master
-    schedule:
-        - cron: "*/30 * * *"
-    workflow_dispatch:
+  workflow_dispatch:
+  schedule:
+    - cron: '36 * * * *'
+  watch:
+  repository_dispatch:
 jobs:
-    build:
-     runs-on: ubuntu-latest
-     steps:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
       - uses: actions/checkout@v1
-      - name: Use Node.js 10.x
+      - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
-            node-version: 10.x
+            node-version: 12.x
       - name: npm install
         run: |
             npm install
-      - name: "mon0eyT0ree"
+      - name: 'mon0eyT0ree'
         run: |
             node Club.js
         env:
