@@ -1,4 +1,4 @@
-name: xxh
+name: one
 on:
  workflow_dispatch:
   schedule:
