@@ -78,24 +78,6 @@ jobs:
       - name: npm install
         run: |
             npm install
-      - name: 'DJDC'
-        run: |
-            node Club.js
-        env:
-            JD_COOKIE: ${{ secrets.JD_COOKIE }}
-            SYNCURL: /DJDC.js
-            GITHUB: ${{ secrets.GITHUB }}
-            HELPURL: ${{ secrets.HELPURL }}
-            EFORK: ${{ secrets.EFORK }} 
-            
-      - uses: actions/checkout@v1
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
-        with:
-            node-version: 12.x
-      - name: npm install
-        run: |
-            npm install
       - name: 'DJSMcs'
         run: |
             node Club.js
@@ -187,4 +169,208 @@ jobs:
               JD_COOKIE: ${{ secrets.JD_COOKIE }}
               XLC: ${{ secrets.XLC }}
               GITHUB: ${{ secrets.GITHUB }}
+              EFORK: ${{ secrets.EFORK }}  
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: lajigth/fully
+          ref: 'master'
+          token: ${{ secrets.PAT }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
+      - name: npm install
+        run: |
+          npm install
+      - name: 'cj'
+        run: |
+          node cj.js
+        env:
+              JD_COOKIE: ${{ secrets.JD_COOKIE }}
+              XLC: ${{ secrets.XLC }}
+              GITHUB: ${{ secrets.GITHUB }}
+              EFORK: ${{ secrets.EFORK }}  
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: lajigth/fully
+          ref: 'master'
+          token: ${{ secrets.PAT }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
+      - name: npm install
+        run: |
+          npm install
+      - name: 'gdgc'
+        run: |
+          node gdgc.js
+        env:
+              JD_COOKIE: ${{ secrets.JD_COOKIE }}
+              XLC: ${{ secrets.XLC }}
+              GITHUB: ${{ secrets.GITHUB }}
+              EFORK: ${{ secrets.EFORK }}  
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: lajigth/fully
+          ref: 'master'
+          token: ${{ secrets.PAT }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
+      - name: npm install
+        run: |
+          npm install
+      - name: 'gdnc'
+        run: |
+          node gdnc.js
+        env:
+              JD_COOKIE: ${{ secrets.JD_COOKIE }}
+              XLC: ${{ secrets.XLC }}
+              GITHUB: ${{ secrets.GITHUB }}
+              EFORK: ${{ secrets.EFORK }}  
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: lajigth/fully
+          ref: 'master'
+          token: ${{ secrets.PAT }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
+      - name: npm install
+        run: |
+          npm install
+      - name: 'gdzd'
+        run: |
+          node gdzd.js
+        env:
+              JD_COOKIE: ${{ secrets.JD_COOKIE }}
+              XLC: ${{ secrets.XLC }}
+              GITHUB: ${{ secrets.GITHUB }}
+              EFORK: ${{ secrets.EFORK }}  
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: lajigth/fully
+          ref: 'master'
+          token: ${{ secrets.PAT }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
+      - name: npm install
+        run: |
+          npm install
+      - name: 'huanqiu'
+        run: |
+          node huanqiu.js
+        env:
+              JD_COOKIE: ${{ secrets.JD_COOKIE }}
+              XLC: ${{ secrets.XLC }}
+              GITHUB: ${{ secrets.GITHUB }}
+              EFORK: ${{ secrets.EFORK }}  
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: lajigth/fully
+          ref: 'master'
+          token: ${{ secrets.PAT }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
+      - name: npm install
+        run: |
+          npm install
+      - name: 'moc'
+        run: |
+          node moc.js
+        env:
+              JD_COOKIE: ${{ secrets.JD_COOKIE }}
+              XLC: ${{ secrets.XLC }}
+              GITHUB: ${{ secrets.GITHUB }}
+              EFORK: ${{ secrets.EFORK }}  
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: lajigth/fully
+          ref: 'master'
+          token: ${{ secrets.PAT }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
+      - name: npm install
+        run: |
+          npm install
+      - name: 'xjhb'
+        run: |
+          node xjhb.js
+        env:
+              JD_COOKIE: ${{ secrets.JD_COOKIE }}
+              XLC: ${{ secrets.XLC }}
+              GITHUB: ${{ secrets.GITHUB }}
               EFORK: ${{ secrets.EFORK }}
+
