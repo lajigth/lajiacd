@@ -61,7 +61,7 @@ jobs:
         with:
           python-version: 3.7       
       - name: 'Install requests'
-        run: pip install requests
+        run: pip install requests.txt
       - name: 'yao'
         run: python3 yaodou.py
         env:
