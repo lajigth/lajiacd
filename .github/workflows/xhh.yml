@@ -12,6 +12,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: De Workflow Runs
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 1
+          keep_minimum_runs: 0
       - uses: actions/checkout@v1
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
