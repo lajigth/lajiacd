@@ -1,8 +1,10 @@
 name: one
 on:
- workflow_dispatch:
   schedule:
-    - cron: '0 */12 * * *'
+    - cron: '0 */8 * * *'
+  workflow_dispatch:
+  watch:
+  repository_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
