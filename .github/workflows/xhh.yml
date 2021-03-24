@@ -60,25 +60,7 @@ jobs:
       - name: npm install
         run: |
             npm install
-      - name: 'djzd'
-        run: |
-            node Club.js
-        env:
-            JD_COOKIE: ${{ secrets.JD_COOKIE }}
-            SYNCURL: /DJZD.js
-            GITHUB: ${{ secrets.GITHUB }}
-            HELPURL: ${{ secrets.HELPURL }}
-            EFORK: ${{ secrets.EFORK }} 
-            
-      - uses: actions/checkout@v1
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
-        with:
-            node-version: 12.x
-      - name: npm install
-        run: |
-            npm install
-      - name: 'DJSMcs'
+      - name: 'chashi'
         run: |
             node Club.js
         env:
@@ -339,6 +321,35 @@ jobs:
       - name: 'moc'
         run: |
           node moc.js
+        env:
+              JD_COOKIE: ${{ secrets.JD_COOKIE }}
+              XLC: ${{ secrets.XLC }}
+              GITHUB: ${{ secrets.GITHUB }}
+              EFORK: ${{ secrets.EFORK }}  
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: lajigth/fully
+          ref: 'master'
+          token: ${{ secrets.PAT }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
+      - name: npm install
+        run: |
+          npm install
+      - name: 'xgc'
+        run: |
+          node xgc.js
         env:
               JD_COOKIE: ${{ secrets.JD_COOKIE }}
               XLC: ${{ secrets.XLC }}
