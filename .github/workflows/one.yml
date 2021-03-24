@@ -1,0 +1,74 @@
+name: xxh
+on:
+ workflow_dispatch:
+  schedule:
+    - cron: '0 */12 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: De Workflow Runs
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 1
+          keep_minimum_runs: 0
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+            node-version: 12.x
+      - name: npm install
+        run: |
+            npm install
+      - name: 're0dPacke0t'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /The.Flash/The.Flash/j2d_re0dPacke0t.js
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }} 
+            
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+            node-version: 12.x
+      - name: npm install
+        run: |
+            npm install
+      - name: 'ddquan'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /The.Flash/The.Flash/ne0cklace0.js
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }} 
+            
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: lajigth/you
+          ref: 'main'
+          token: ${{ secrets.PAT }}
+      - name: 'Set up Python'
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7       
+      - name: 'Install requests'
+        run: pip install requests
+      - name: 'yao'
+        run: python3 yaodou.py
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}     
+            
+            
+            
+            
+            
+            
