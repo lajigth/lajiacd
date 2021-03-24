@@ -20,7 +20,6 @@ jobs:
             - name: npm install
               run: |
                   npm install
-                  npm install crypto-js http-server tough-cookie got --save
             - name: "mon0eyT0ree"
               run: |
                   node Club.js
