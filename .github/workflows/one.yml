@@ -60,15 +60,124 @@ jobs:
       - name: npm install
         run: |
             npm install
-      - name: 'm0mbi'
+      - name: 'kuad'
         run: |
             node Club.js
         env:
             JD_COOKIE: ${{ secrets.JD_COOKIE }}
-            SYNCURL: /The.Flash/The.Flash/j34d_m0s.js 
+            SYNCURL: /The.Flash/The.Flash/jd_kd.js
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }}  
+            
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+            node-version: 12.x
+      - name: npm install
+        run: |
+            npm install
+      - name: 'xjqd'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /The.Flash/The.Flash/jxqd.js 
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }}  
+            
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+            node-version: 12.x
+      - name: npm install
+        run: |
+            npm install
+      - name: 'spdzp'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /The.Flash/The.Flash/csdzp.js
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }}  
+            
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+            node-version: 12.x
+      - name: npm install
+        run: |
+            npm install
+      - name: 'jxd'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /The.Flash/The.Flash/jxd.js
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }}  
+            
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+            node-version: 12.x
+      - name: npm install
+        run: |
+            npm install
+      - name: 'b0oo0ksho0p'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /The.Flash/The.Flash/b0oo0ksho0p.js
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }}  
+            
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+            node-version: 12.x
+      - name: npm install
+        run: |
+            npm install
+      - name: 's0mall_h0ome'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /The.Flash/The.Flash/s0mall_h0ome.js
+            GITHUB: ${{ secrets.GITHUB }}
+            HELPURL: ${{ secrets.HELPURL }}
+            EFORK: ${{ secrets.EFORK }}  
+            
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+            node-version: 12.x
+      - name: npm install
+        run: |
+            npm install
+      - name: 'car'
+        run: |
+            node Club.js
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SYNCURL: /The.Flash/The.Flash/qiche.js
             GITHUB: ${{ secrets.GITHUB }}
             HELPURL: ${{ secrets.HELPURL }}
             EFORK: ${{ secrets.EFORK }}
+            
             
             
             
