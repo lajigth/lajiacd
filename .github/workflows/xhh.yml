@@ -378,3 +378,10 @@ jobs:
               XLC: ${{ secrets.XLC }}
               GITHUB: ${{ secrets.GITHUB }}
               EFORK: ${{ secrets.EFORK }}  
+      - name: De Workflow Runs
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 1
+          keep_minimum_runs: 0
