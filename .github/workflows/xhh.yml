@@ -137,9 +137,10 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: 'cj'
+      - name: 'cj-shoplottery'
         run: |
           node cj.js
+          node shoplottery.js
         env:
               JD_COOKIE: ${{ secrets.JD_COOKIE }}
               XLC: ${{ secrets.XLC }}
