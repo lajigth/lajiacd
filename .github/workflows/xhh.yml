@@ -399,7 +399,36 @@ jobs:
               GITHUB: ${{ secrets.GITHUB }}
               EFORK: ${{ secrets.EFORK }}
               TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-              TG_USER_ID: ${{ secrets.TG_USER_ID }}
+              TG_USER_ID: ${{ secrets.TG_USER_ID }}  
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: lajigth/you
+          ref: 'main'
+          token: ${{ secrets.PAT }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
+      - name: npm install
+        run: |
+          npm install
+      - name: 'zbqju'
+        run: |
+          node zbqju.js
+        env:
+              JD_COOKIE: ${{ secrets.JD_COOKIE }}
+              XLC: ${{ secrets.XLC }}
+              GITHUB: ${{ secrets.GITHUB }}
+              EFORK: ${{ secrets.EFORK }}  
       - name: De Workflow Runs
         uses: Mattraks/delete-workflow-runs@main
         with:
