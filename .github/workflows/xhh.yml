@@ -62,24 +62,7 @@ jobs:
             GITHUB: ${{ secrets.GITHUB }}
             HELPURL: ${{ secrets.HELPURL }}
             EFORK: ${{ secrets.EFORK }}  
-            
-      - uses: actions/checkout@v1
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
-        with:
-            node-version: 12.x
-      - name: npm install
-        run: |
-            npm install
-      - name: 'sp0eed'
-        run: |
-            node Club.js
-        env:
-            JD_COOKIE: ${{ secrets.JD_COOKIE }}
-            SYNCURL: /The.Flash/The.Flash/j0d_sp0eed.js
-            GITHUB: ${{ secrets.GITHUB }}
-            HELPURL: ${{ secrets.HELPURL }}
-            EFORK: ${{ secrets.EFORK }}  
+
             
       - uses: actions/checkout@v1
       - name: Use Node.js 12.x
