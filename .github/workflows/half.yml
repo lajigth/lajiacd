@@ -1,7 +1,7 @@
 name: half
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/30 * * * *'
   workflow_dispatch:
   watch:
   repository_dispatch:
@@ -37,6 +37,36 @@ jobs:
               XLC: ${{ secrets.XLC }}
               GITHUB: ${{ secrets.GITHUB }}
               EFORK: ${{ secrets.EFORK }}  
+                                  
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: lajigth/you
+          ref: 'main'
+          token: ${{ secrets.PAT }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
+      - name: npm install
+        run: |
+          npm install
+      - name: 'jfd'
+        run: |
+          node jfd.js
+        env:
+              JD_COOKIE: ${{ secrets.JD_COOKIE }}
+              JXNCTOKENS: ${{ secrets.JXNCTOKENS }}
+              XLC: ${{ secrets.XLC }}
+              GITHUB: ${{ secrets.GITHUB }}
+              EFORK: ${{ secrets.EFORK }}   
               
       - name: Checkout
         uses: actions/checkout@v2
