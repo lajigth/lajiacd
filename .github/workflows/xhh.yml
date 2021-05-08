@@ -102,7 +102,7 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: 'health'
+      - name: 'health-coll'
         run: |
           node health-coll.js
         env:
