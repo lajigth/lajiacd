@@ -353,35 +353,7 @@ jobs:
               EFORK: ${{ secrets.EFORK }}
               TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
               TG_USER_ID: ${{ secrets.TG_USER_ID }} 
-            
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          repository: lajigth/fully
-          ref: 'master'
-          token: ${{ secrets.PAT }}
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: Cache node_modules
-        uses: actions/cache@v2 # 使用 GitHub 官方的缓存 Action。
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }} # 使用 package-lock.json 的 Hash 作为缓存的 key。也可以使用 package.json 代替
-      - name: npm install
-        run: |
-          npm install
-      - name: 'health'
-        run: |
-          node health.js
-        env:
-              JD_COOKIE: ${{ secrets.JD_COOKIE }}
-              XLC: ${{ secrets.XLC }}
-              GITHUB: ${{ secrets.GITHUB }}
-              EFORK: ${{ secrets.EFORK }}
+     
 
       - name: Checkout
         uses: actions/checkout@v2
@@ -410,37 +382,7 @@ jobs:
               JD_COOKIE: ${{ secrets.JD_COOKIE }}
               XLC: ${{ secrets.XLC }}
               GITHUB: ${{ secrets.GITHUB }}
-              EFORK: ${{ secrets.EFORK }}  
-                                  
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          repository: lajigth/you
-          ref: 'main'
-          token: ${{ secrets.PAT }}
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: Cache node_modules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
-      - name: npm install
-        run: |
-          npm install
-      - name: 'jfd'
-        run: |
-          node jfd.js
-        env:
-              JD_COOKIE: ${{ secrets.JD_COOKIE }}
-              JXNCTOKENS: ${{ secrets.JXNCTOKENS }}
-              XLC: ${{ secrets.XLC }}
-              GITHUB: ${{ secrets.GITHUB }}
-              EFORK: ${{ secrets.EFORK }}   
+              EFORK: ${{ secrets.EFORK }}
       - name: De Workflow Runs
         uses: Mattraks/delete-workflow-runs@main
         with:
