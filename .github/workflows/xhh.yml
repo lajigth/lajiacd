@@ -374,6 +374,8 @@ jobs:
       - name: npm install
         run: |
           npm install
+      - name: 'health'
+        run: |
           node health.js
         env:
               JD_COOKIE: ${{ secrets.JD_COOKIE }}
